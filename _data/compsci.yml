@@ -9,3 +9,13 @@ Unit2:
   description: Learn (JavaScript|Python|Java).  Start Agile development process.
   start: 4
   end: 7
+Unit3:
+  title: Wrapping up the Trimester
+  description: Passion Project
+  start: 8
+  end: 12
+Unit4: 
+  title: Passion Project 2
+  description: Start of the trimester 2 
+  start: 13
+  end: 14
