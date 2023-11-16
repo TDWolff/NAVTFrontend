@@ -284,31 +284,3 @@ height: 100%;
   width: 70%; /* Adjust the value as needed */
   background-color: rgb(11, 183, 240); /* Change the color as needed */
 }
-.button-off {
-  background-color: rgb(251, 6, 6); /* Green */
-  border: none;
-  color: rgb(244, 10, 10);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}
-.button-off {
-  background-color: rgb(6, 251, 35); /* Green */
-  border: none;
-  color: rgb(10, 244, 49);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}

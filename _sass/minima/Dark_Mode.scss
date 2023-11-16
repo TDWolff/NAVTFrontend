@@ -52,8 +52,13 @@ pre, code {
 
 .btn {
     background-color: $overlay !important;
-    color: $high-emph !important;
-    border-color: $overlay-light !important;
+    color: green !important;
+    border-color: green !important;
+}
+.btnoff {
+    background-color: $overlay !important;
+    color: rgb(128, 38, 0) !important;
+    border-color: rgb(128, 19, 0) !important;
 }
 
 .btn:hover {
@@ -103,3 +108,4 @@ li .post-meta-description {
 .search-results-list-item .search-result-title {
     color: cornflowerblue !important;
 }
+
