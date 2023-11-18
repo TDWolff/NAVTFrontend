@@ -9,8 +9,8 @@ courses: { compsci: {week: 0} }
 ---
 
 <p>
-<button class="btnoff" id="button A" onclick="toggleButtonClassA();Outputandgate()">Input A</button>
-<button class="btnoff" id="button B" onclick="toggleButtonClassB();Outputandgate()">Input B</button>
+<button class="btnoff" id="button A" onclick="toggleButtonClassA();Outputandgate();Outputnandgate()">Input A</button>
+<button class="btnoff" id="button B" onclick="toggleButtonClassB();Outputandgate();Outputnandgate()">Input B</button>
 </p>
 <script> // logic for button stying change
     function toggleButtonClassA() {
@@ -91,9 +91,6 @@ courses: { compsci: {week: 0} }
         if (classA == "btn" && classB == "btn") {
             var outand = "1"
         }
-        else if ( classA == "btnoff" && classB == "btnoff"){
-            var outand = "1"
-        } 
         else{
             var outand = "0"
         }
@@ -110,15 +107,12 @@ courses: { compsci: {week: 0} }
         var classB = buttonB.className
         var outputand = document.createElement("td")
         if (classA == "btn" && classB == "btn") {
-            var outand = "1"
+            var outnand = "0"
         }
-        else if ( classA == "btnoff" && classB == "btnoff"){
-            var outand = "1"
-        } 
         else{
-            var outand = "0"
+            var outnand = "1"
         }
-        document.getElementById("nand").innerHTML= outand
+        document.getElementById("nand").innerHTML= outnand
     }
     
 </script>
