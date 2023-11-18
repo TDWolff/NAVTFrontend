@@ -9,13 +9,12 @@ courses: { compsci: {week: 0} }
 ---
 
 <p>
-<button class="btnoff" id="button A" onclick="toggleButtonClassA();Outputandgate();Outputnandgate()">Input A</button>
-<button class="btnoff" id="button B" onclick="toggleButtonClassB();Outputandgate();Outputnandgate()">Input B</button>
+<button class="btnoff" id="button A" onclick="toggleButtonClassA();Outputandgate();Outputnandgate();Outputorgate()">Input A</button>
+<button class="btnoff" id="button B" onclick="toggleButtonClassB();Outputandgate();Outputnandgate();Outputorgate()">Input B</button>
 </p>
 <script> // logic for button stying change
     function toggleButtonClassA() {
         var button = document.getElementById('button A');
-
         if (button.classList.contains('btn')) {
             button.classList.remove('btn');
             button.classList.add('btnoff');
@@ -26,7 +25,6 @@ courses: { compsci: {week: 0} }
     }
         function toggleButtonClassB() {
         var button = document.getElementById('button B');
-
         if (button.classList.contains('btn')) {
             button.classList.remove('btn');
             button.classList.add('btnoff');
@@ -62,7 +60,9 @@ courses: { compsci: {week: 0} }
     <tr>
         <td><img src="data:image/png;base64,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" alt="Or Gate"/></td>
         <td> Or Gate </td>
-        <td id="or gate"></td>
+        <td>
+            <p id ="or"></p>
+        </td>
         
     </tr>
     <tr>
@@ -98,7 +98,7 @@ courses: { compsci: {week: 0} }
     }
     
 </script>
-<script> // logic for and gate output
+<script> // logic for nand gate output
     function Outputnandgate(){
         var nandOutput = document.getElementById('nand');
         var buttonA = document.getElementById("button A")
@@ -113,6 +113,24 @@ courses: { compsci: {week: 0} }
             var outnand = "1"
         }
         document.getElementById("nand").innerHTML= outnand
+    }
+    
+</script>
+<script> // logic for or gate output
+    function Outputorgate(){
+        var nandOutput = document.getElementById('or');
+        var buttonA = document.getElementById("button A")
+        var buttonB = document.getElementById("button B")
+        var classA = buttonA.className
+        var classB = buttonB.className
+        var outputand = document.createElement("td")
+        if (classA == "btn" || classB == "btn") {
+            var outor = "1"
+        }
+        else{
+            var outor = "0"
+        }
+        document.getElementById("or").innerHTML= outor
     }
     
 </script>
