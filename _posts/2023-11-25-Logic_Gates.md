@@ -9,8 +9,8 @@ courses: { compsci: {week: 0} }
 ---
 
 <p>
-<button class="btnoff" id="button A" onclick="toggleButtonClassA();Outputandgate();Outputnandgate();Outputorgate()">Input A</button>
-<button class="btnoff" id="button B" onclick="toggleButtonClassB();Outputandgate();Outputnandgate();Outputorgate()">Input B</button>
+<button class="btnoff" id="button A" onclick="toggleButtonClassA();Outputandgate();Outputnandgate();Outputorgate();Outputnorgate();Outputxorgate()">Input A</button>
+<button class="btnoff" id="button B" onclick="toggleButtonClassB();Outputandgate();Outputnandgate();Outputorgate();Outputnorgate();Outputxorgate()">Input B</button>
 </p>
 <script> // logic for button stying change
     function toggleButtonClassA() {
@@ -62,18 +62,21 @@ courses: { compsci: {week: 0} }
         <td> Or Gate </td>
         <td>
             <p id ="or"></p>
-        </td>
-        
+        </td>    
     </tr>
     <tr>
         <td><img src="data:image/png;base64,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" alt="Nor Gate"/></td>
         <td> Nor Gate </td>
-        <td id="nor gate"></td>
+        <td>
+            <p id ="nor"></p>
+        </td>
     </tr>
     <tr>
         <td><img src="data:image/png;base64,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" alt="Xor Gate"/></td>
         <td> Xor Gate </td>
-        <td id="xor gate"></td>
+        <td>
+            <p id ="xor"></p>
+        </td>
     </tr>
     <tbody id="table_body">
 
@@ -131,6 +134,42 @@ courses: { compsci: {week: 0} }
             var outor = "0"
         }
         document.getElementById("or").innerHTML= outor
+    }
+    
+</script>
+<script> // logic for nor gate output
+    function Outputnorgate(){
+        var nandOutput = document.getElementById('nor');
+        var buttonA = document.getElementById("button A")
+        var buttonB = document.getElementById("button B")
+        var classA = buttonA.className
+        var classB = buttonB.className
+        var outputand = document.createElement("td")
+        if (classA == "btn" || classB == "btn") {
+            var outnor = "0"
+        }
+        else{
+            var outnor = "1"
+        }
+        document.getElementById("nor").innerHTML= outnor
+    }
+    
+</script>
+<script> // logic for xor gate output
+    function Outputxorgate(){
+        var nandOutput = document.getElementById('xor');
+        var buttonA = document.getElementById("button A")
+        var buttonB = document.getElementById("button B")
+        var classA = buttonA.className
+        var classB = buttonB.className
+        var outputand = document.createElement("td")
+        if ((classA == "btn" && classB != "btn") || (classA != "btn" && classB == "btn")) {
+            var outxor = "0"
+        }
+        else{
+            var outxor = "1"
+        }
+        document.getElementById("xor").innerHTML= outxor
     }
     
 </script>
