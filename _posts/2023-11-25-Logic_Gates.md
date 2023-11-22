@@ -181,7 +181,7 @@ courses: { compsci: {week: 0} }
 </script>
 <html>
     <p>
-        <button onclick="randominput()">start</button>
+        <button onclick="randominput()">new question</button>
     </p>
     <p> note: For and gate type: "a"; for nand gate type: "n"; for or gate type: "o"; for nor gate type: "no";for xor gate type: "x" </p>
     <table>
@@ -201,63 +201,65 @@ courses: { compsci: {week: 0} }
             </td>
             <td>
                 <form id="myForm">
-                    <label for="textInput">Enter one possible logic gate:</label>
+                    <label for="textInput">Enter logic gate(s):</label>
                     <input type="text" id="textInput" name="textInput">
                     <button type="button" onclick="checkInput()">Submit</button>
                 </form>
-
             </td>
         </tr>
     </table>
 </html>
 <script>
-    let a = Math.floor(Math.random() * 2)
-    let b = Math.floor(Math.random() * 2)
-    let c = Math.floor(Math.random() * 2)
-    function randominput(){
-        document.getElementById("output").innerHTML= "output: " + a
-        document.getElementById("input").innerHTML= "variable a: " + a + " variable b: " + b
-        if (a == 0 && b == 0){
-            if (c == 1) {
-                var answer = "n,no,"
-            }
-            else {
-                var answer = "a,o,x"
-            }
-        }
-        if (a == 1 && b == 0){
-            if (c == 1) {
-                var answer = "n,o,x"
-            }
-            else {
-                var answer = "a,no"
-            }
-        }
-         if (a == 0 && b == 1){
-            if (c == 1) {
-                var answer = "n,o,x"
-            }
-            else {
-                var answer = "a,no"
-            }
-        }
-         if (a == 1 && b == 1){
-            if (c == 1) {
-                var answer = "n,o,no"
-            }
-            else {
-                var answer = "a,x"
-            }
+    let a = Math.floor(Math.random() * 2);
+    let b = Math.floor(Math.random() * 2);
+    let c = Math.floor(Math.random() * 2);
+    let answer = "";
+
+    if (a == 0 && b == 0){
+        if (c == 1) {
+            answer = "n,no,";
+        } else {
+            answer = "a,o,x";
         }
     }
+    if (a == 1 && b == 0){
+        if (c == 1) {
+            answer = "n,o,x";
+        } else {
+            answer = "a,no";
+        }
+    }
+    if (a == 0 && b == 1){
+        if (c == 1) {
+            answer = "n,o,x";
+        } else {
+            answer = "a,no";
+        }
+    }
+    if (a == 1 && b == 1){
+        if (c == 1) {
+            answer = "n,o,no";
+        } else {
+            answer = "a,x";
+        }
+    }
+
+    function randominput(){
+        document.getElementById("output").innerHTML= "output: " + a;
+        document.getElementById("input").innerHTML= "variable a: " + a + " variable b: " + b;
+    }
+
     function checkInput(){
         // Get the value from the textbox
-        var inputValue = document.getElementById('textInput').value;
-        // Check if the input is not empty
-        if (inputValue.trim() !== '') {
-            alert('Input is valid: ' + inputValue);
+        var inputValue = document.getElementById('textInput').value.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+        var sortedInput = inputValue.split(',').sort().join(',');
+        var sortedAnswer = answer.split(',').sort().join(',');
+
+        // Check if the input matches the answer (order-insensitive)
+        if (sortedInput === sortedAnswer) {
+            alert('Correct!');
         } else {
-            alert('Please enter something');
+            alert('Incorrect. Try again.');
         }
     }
 </script>
