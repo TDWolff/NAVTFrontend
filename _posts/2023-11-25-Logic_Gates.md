@@ -170,10 +170,10 @@ courses: { compsci: {week: 0} }
         var classB = buttonB.className
         var outputand = document.createElement("td")
         if ((classA == "btn" && classB != "btn") || (classA != "btn" && classB == "btn")) {
-            var outxor = "0"
+            var outxor = "1"
         }
         else{
-            var outxor = "1"
+            var outxor = "0"
         }
         document.getElementById("xor").innerHTML= outxor
     }
