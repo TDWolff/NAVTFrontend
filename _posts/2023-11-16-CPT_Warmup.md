@@ -26,3 +26,14 @@ type: hacks
 - For the logic gate part, we have incorporated an interactive truth table for all of the logic gates.
 - Then we are planning to add a randomly generated quiz about logic gates which would randomly decide the inputs and outputs. Then the user would have to match it with the corresponding logic gate(s). Logic from the previous part (interactive truth table) will be used to check if the answer is correct.
 - Then we would like to add an overall theme which would look good for the UI.
+
+### ASCII :
+- For the logic gate part, we have incorporated an interactive truth table for all of the logic gates.
+- Then we are planning to add a randomly generated quiz about logic gates which would randomly decide the inputs and outputs. Then the user would have to match it with the corresponding logic gate(s). Logic from the previous part (interactive truth table) will be used to check if the answer is correct.
+- Then we would like to add an overall theme which would look good for the UI.
+
+### Color Code Aspect:
+- For the logic gate part, we have incorporated an interactive truth table for all of the logic gates.
+- Then we are planning to add a randomly generated quiz about logic gates which would randomly decide the inputs and outputs. Then the user would have to match it with the corresponding logic gate(s). Logic from the previous part (interactive truth table) will be used to check if the answer is correct.
+- Then we would like to add an overall theme which would look good for the UI.
+
