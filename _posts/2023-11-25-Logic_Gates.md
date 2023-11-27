@@ -82,7 +82,7 @@ courses: { compsci: {week: 0} }
         <td>
             <p id ="xor"></p>
         </td>
-        <td></td>
+        <td> a two-input digital circuit that outputs a logical “1” if the two input values differ, i.e., its output is a logical “1” if either of its inputs are 1, but not at the same time (exclusively). </td>
     </tr>
     <tbody id="table_body">
 
@@ -170,10 +170,10 @@ courses: { compsci: {week: 0} }
         var classB = buttonB.className
         var outputand = document.createElement("td")
         if ((classA == "btn" && classB != "btn") || (classA != "btn" && classB == "btn")) {
-            var outxor = "0"
+            var outxor = "1"
         }
         else{
-            var outxor = "1"
+            var outxor = "0"
         }
         document.getElementById("xor").innerHTML= outxor
     }
