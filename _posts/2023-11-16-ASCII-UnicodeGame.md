@@ -1,10 +1,10 @@
 ---
-toc: true
-comments: false
-hide: false
-layout: post
-type: help
-title: ASCII and Unicode
+toc: True
+comments: True
+title: ASCII Game
+description: An ASCII Game
+courses: {'compsci': {'week': 13}}
+type: hacks
 ---
 
 <html lang="en">
