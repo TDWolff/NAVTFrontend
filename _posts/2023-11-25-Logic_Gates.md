@@ -246,10 +246,10 @@ courses: { compsci: {week: 0} }
         }
         if (a == 1 && b == 1){
             if (c == 1) {
-                answer = "n,o,no";
+                answer = "a,o";
             } 
             else {
-                answer = "a,x";
+                answer = "n,no,x";
             }
         }
     }
