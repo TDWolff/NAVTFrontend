@@ -5,8 +5,9 @@ title: ASCII Game
 description: An ASCII Game
 courses: {'compsci': {'week': 13}}
 type: hacks
+permalink: /basics/ascii
 ---
-
+{% include nav-warmup.html %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
