@@ -82,17 +82,17 @@ search_exclude: false
                     sortedCanvas.height = img.height * scale;
 
                     // Send the image data to the server
-                    fetch('http://itsnyx.pythonanywhere.com/process_image', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            image: base64Image,
-                            method: method,
-                            orientation: orientation
-                        })
-                    })
+                    fetch('https://itsnyx.pythonanywhere.com/process_image', {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({
+                          image: base64Image,
+                          method: method,
+                          orientation: orientation
+                      })
+                  })
                     .then(response => response.json())
                     .then(data => {
                         // Create a new image from the sorted image data
