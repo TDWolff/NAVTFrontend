@@ -184,7 +184,7 @@ permalink: /basics/logicgates
     <p>
         <button onclick="randominput()">new question</button>
     </p>
-    <p> note: For and gate type: "a"; for nand gate type: "n"; for or gate type: "o"; for nor gate type: "no";for xor gate type: "x" </p>
+    <p> note: For and gate type: "a"; for nand gate type: "n"; for or gate type: "o"; for nor gate type: "no";for xor gate type: "x". Seprate the answers by a comma </p>
     <table>
         <thead>
         <tr>

@@ -7,7 +7,7 @@ courses: {'compsci': {'week': 13}}
 type: hacks
 permalink: /basics/colorcode
 ---
-
+{% include nav-warmup.html %}
 <head>
     <title>RGB Color Selector</title>
     <style>
