@@ -1,0 +1,57 @@
+---
+permalink: /imggen.html
+layout: post
+search_exclude: false
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+</head>
+<body>
+    <h1>Image Generator</h1>
+    <label for="prompt">Enter Prompt:</label>
+    <input type="text" id="prompt" name="prompt">
+    <button onclick="generateImage()">Generate Image</button>
+
+    <div id="imageContainer">
+        <!-- Image will be displayed here -->
+    </div>
+
+    <script>
+        function generateImage() {
+            const prompt = document.getElementById("prompt").value;
+
+            fetch("https://itsnyx.pythonanywhere.com/generate_image", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ prompt }),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.image) {
+                    // Create an image element and set its source to the returned image data
+                    const image = document.createElement("img");
+                    image.src = `data:image/png;base64, ${data.image}`;
+
+                    // Append the image to the image container
+                    const imageContainer = document.getElementById("imageContainer");
+                    imageContainer.innerHTML = ""; // Clear previous image, if any
+                    imageContainer.appendChild(image);
+                } else {
+                    console.error("Error: Image data not received.");
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        }
+    </script>
+</body>
+</html>

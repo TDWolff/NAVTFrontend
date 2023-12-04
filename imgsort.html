@@ -1,0 +1,116 @@
+---
+permalink: /imgsort.html
+layout: post
+search_exclude: false
+---
+<html>
+<head>
+    <title>Image Sorter</title>
+    <h1>Image Sorter</h1>
+    <p>Upload an image and sort it by color, brightness, or other properties.</p>
+</head>
+<body>
+    <style>
+        #originalCanvas, #sortedCanvas {
+            filter: invert(0);
+        }
+        #inputImage, #sortingMethod, #orientation, #submit {
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+    <input type="file" id="inputImage" accept="image/*">
+    <!-- Add the sorting method -->
+    <select id="sortingMethod">
+        <option value="rgb">RGB</option>
+        <option value="contrast">Contrast</option>
+        <option value="hue">Hue</option>
+        <option value="saturation">Saturation</option>
+        <option value="brightness">Brightness</option>
+        <option value="luminance">Luminance</option>
+        <option value="intensity">Intensity</option>
+        <option value="minimum">Minimum</option>
+        <option value="random">Random</option>
+    </select>
+    <!-- Add the orientation -->
+    <select id="orientation">
+      <option value="horizontal">Horizontal</option>
+      <option value="vertical">Vertical</option>
+  </select>
+    <button type="submit" id="submit">Submit</button>
+    <canvas id="originalCanvas"></canvas>
+    <canvas id="sortedCanvas"></canvas>
+    <script>
+        var MAX_WIDTH = 200;
+        var MAX_HEIGHT = 200;
+
+        document.getElementById('submit').addEventListener('click', function(event) {
+            event.preventDefault();
+
+            var fileInput = document.getElementById('inputImage');
+            var file = fileInput.files[0];
+
+            if (!file) {
+                alert('Please select a file');
+                return;
+            }
+
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                var img = new Image();
+                img.onload = function() {
+                    var originalCanvas = document.getElementById('originalCanvas');
+                    var originalCtx = originalCanvas.getContext('2d');
+
+                    // Calculate the scale to fit the image within the maximum dimensions
+                    var scale = MAX_WIDTH / img.width;
+                    originalCanvas.width = MAX_WIDTH;
+                    originalCanvas.height = img.height * scale;
+
+                    // Draw the image on the canvas
+                    originalCtx.drawImage(img, 0, 0, originalCanvas.width, originalCanvas.height);
+
+                    // Get the sorting method and orientation
+                    var method = document.getElementById('sortingMethod').value;
+                    var orientation = document.getElementById('orientation').value;
+
+                    // Convert the image data to base64
+                    var imageData = originalCanvas.toDataURL('image/png');
+                    var base64Image = imageData.split(',')[1];
+
+                    sortedCanvas.width = MAX_WIDTH;
+                    sortedCanvas.height = img.height * scale;
+
+                    // Send the image data to the server
+                    fetch('https://itsnyx.pythonanywhere.com/process_image', {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({
+                          image: base64Image,
+                          method: method,
+                          orientation: orientation
+                      })
+                  })
+                    .then(response => response.json())
+                    .then(data => {
+                        // Create a new image from the sorted image data
+                        var sortedImg = new Image();
+                        sortedImg.onload = function() {
+                            var sortedCanvas = document.getElementById('sortedCanvas');
+                            var sortedCtx = sortedCanvas.getContext('2d');
+
+                            // Draw the sorted image on the canvas
+                            sortedCtx.drawImage(sortedImg, 0, 0, sortedCanvas.width, sortedCanvas.height);
+                        };
+                        sortedImg.src = 'data:image/png;base64,' + data.image;
+                    });
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+    </script>
+</body>
+</html>
