@@ -1,14 +1,13 @@
 header, footer {
     font-family: 'Lobster', cursive;
     background-color: #0B2447 !important;
-    background-image: url('https://opengameart.org/sites/default/files/bg_space_seamless_1.png');
+    background-image: url("../../images/bg_space_seamless_1.png");
 }
 
 body {
-    font-family: 'Lobster', cursive; /* Replace 'YourHolidayFont' with the actual font name */
-    background-color: #465d7d !important; /* Set a background color for better visibility */
+    font-family: 'Lobster', cursive;
+    background-color: #465d7d !important;
     color: #19365f;
-    background-image: url('https://opengameart.org/sites/default/files/bg_space_seamless_1.png');
+    background-image: url("../../images/bg_space_seamless_1.png");
     //filter: blur(8px);
-  }
- 
+}
