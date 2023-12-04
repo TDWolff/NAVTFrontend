@@ -33,6 +33,13 @@ font-size: 20px;
 color:  #637ea1;
 }
 
+::selection {
+  /* Change highlight background color to black */
+  background: #19212a;
+  /* Change highlight text color to red */
+  color: #a0b2c8;
+}
+
 .post-link{
 font-weight: normal;
 }
