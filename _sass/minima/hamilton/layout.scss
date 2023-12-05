@@ -327,8 +327,8 @@ ul.social-icons {
   -ms-overflow-style: none;  // IE and Edge
   scrollbar-width: none;     // Firefox
 
-  padding-left: $spacing-unit;
-  padding-right: $spacing-unit;
+  // padding-left: $spacing-unit;
+  // padding-right: $spacing-unit;
 
   @include media-query($on-medium) {
     padding-left: $spacing-unit / 2;
@@ -346,11 +346,17 @@ ul.social-icons {
   display: none;
 }
 
-/**
- * Homepage
- */
-.home {
-  margin-top: $spacing-unit;
+// /**
+//  * Homepage
+//  */
+ .home {
+  float: left;
+  width: 60%; /* Adjust as needed */
+}
+
+.aboutsechome {
+  float: right;
+  width: 40%; /* Adjust as needed */
 }
 
 .post-list {
