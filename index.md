@@ -15,7 +15,8 @@ Read Time: 1 min
 - [Logic Gates](/_posts/2023-11-25-Logic_Gates.md)
 - [ASCII Game](/_posts/2023-11-16-ASCII-UnicodeGame.md)
 - [Color Coding](/_posts/2023-11-30-ColorCode.md)
-- [Image Sorting](/_notebooks/2023-11-29-imgsorting.ipynb)
+- [Image Sorting](/imgsort.html)
+- [Image Generation](/imggen.html)
 
 
 
