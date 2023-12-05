@@ -60,7 +60,16 @@ pre, code {
     color: rgb(128, 38, 0) !important;
     border-color: rgb(128, 19, 0) !important;
 }
-
+.btnchoice {
+    border-color:green;
+    background-color: $overlay !important;
+    color:green
+}
+.btnnochoice{
+    border-color:black;
+    background-color: $overlay !important;
+    color:black
+}
 .btn:hover {
     background-color: $dark-grey !important;
 }
