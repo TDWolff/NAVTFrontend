@@ -368,7 +368,7 @@ permalink: /basics/logicgates
     }
 </script>
 <html>
-    <h> note: Type all the possible logic gates and sperate them with a comma(eg. "and,nor,xor") </h>
+    <p> note: Type all the possible logic gates and sperate them with a comma(eg. "and,nor,xor") </p>
     <p>
         <button onclick="randominpu()">new question</button>
     </p>
