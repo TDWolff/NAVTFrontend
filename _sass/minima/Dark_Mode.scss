@@ -73,7 +73,9 @@ pre, code {
 .btn:hover {
     background-color: $dark-grey !important;
 }
-
+.btnoff:hover {
+    background-color: $dark-grey !important;
+}
 table th{
     background-color: #0B2447;
     border-color: $overlay-light;
