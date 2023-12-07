@@ -2,12 +2,13 @@
 toc: true
 comments: false
 layout: post
-title: Logic gates edit
+title: Logic gates
 description: Example Blog!!!  This shows planning and notes from hacks.
 type: plans
 courses: { compsci: {week: 0} }
+permalink: /basics/logicgates
 ---
-
+{% include nav-warmup.html %}
 <p>
 <button class="btnoff" id="button A" onclick="toggleButtonClassA();Outputandgate();Outputnandgate();Outputorgate();Outputnorgate();Outputxorgate()">Input A</button>
 <button class="btnoff" id="button B" onclick="toggleButtonClassB();Outputandgate();Outputnandgate();Outputorgate();Outputnorgate();Outputxorgate()">Input B</button>
@@ -181,9 +182,9 @@ courses: { compsci: {week: 0} }
 </script>
 <html>
     <p>
-        <button onclick="randominput1()">new question</button>
+        <button onclick="randominputA()">new question</button>
     </p>
-    <p> note: For and gate type: "a"; for nand gate type: "n"; for or gate type: "o"; for nor gate type: "no";for xor gate type: "x". Seprate the answers by a comma </p>
+    <p> note: Choose all that applies </p>
     <table>
         <thead>
         <tr>
@@ -286,7 +287,7 @@ courses: { compsci: {week: 0} }
             choice5 = 1
         }
     }
-    function randominput1(){
+    function randominputA(){
         a = Math.floor(Math.random() * 2);
         b = Math.floor(Math.random() * 2);
         c = Math.floor(Math.random() * 2);
@@ -363,6 +364,93 @@ courses: { compsci: {week: 0} }
         }
         else{
             alert('incorrect!')
+        }
+    }
+</script>
+<html>
+    <h> note: Type all the possible logic gates and sperate them with a comma(eg. "and,nor,xor") </h>
+    <p>
+        <button onclick="randominpu()">new question</button>
+    </p>
+    <table>
+        <thead>
+        <tr>
+            <th>Input</th>
+            <th>Output</th>
+            <th>Type of Logic gate(s)</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>
+                <p id="input2"></p>
+            </td>
+            <td>
+                <p id="output2"></p>
+            </td>
+            <td>
+                <form id="myForm">
+                    <label for="textInput">Enter logic gate(s):</label>
+                    <input type="text" id="textInput" name="textInput">
+                    <button type="button" onclick="checkInput()">Submit</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+</html>
+<script>
+    let a2 = "";
+    let b2 = ""
+    let c2 = ""
+    let answer2 = ""
+    function randominpu(){
+        a2 = Math.floor(Math.random() * 2);
+        b2 = Math.floor(Math.random() * 2);
+        c2 = Math.floor(Math.random() * 2);
+        document.getElementById("output2").innerHTML= "output: " + c2;
+        document.getElementById("input2").innerHTML= "variable a: " + a2 + " variable b: " + b2;
+        if (a2 == 0 && b2 == 0){
+            if (c2 == 1) {
+                answer2 = "nor,nand";
+            } 
+            else {
+                answer2 = "and,or,xor";
+            }
+        }
+        if (a2 == 1 && b2 == 0){
+            if (c2 == 1) {
+                answer2 = "nand,or,xor";
+            } 
+            else {
+                answer2 = "and,nor";
+            }
+        }
+        if (a2 == 0 && b2 == 1){
+            if (c2 == 1) {
+                answer2 = "nand,or,xor";
+            } 
+            else {
+                answer2 = "and,nor";
+            }
+        }
+        if (a2 == 1 && b2 == 1){
+            if (c2 == 1) {
+                answer2 = "and,or";
+            } 
+            else {
+                answer2 = "nand,nor,xor";
+            }
+        }
+    }
+    function checkInput(){
+        // Get the value from the textbox
+        var inputValue = document.getElementById('textInput').value.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+        var sortedInput = inputValue.split(',').sort().join(',');
+        var sortedAnswer = answer2.split(',').sort().join(',');
+        // Check if the input matches the answer (order-insensitive)
+        if (sortedInput === sortedAnswer) {
+            alert('Correct!');
+        } else {
+            alert('Incorrect. Try again.');
         }
     }
 </script>

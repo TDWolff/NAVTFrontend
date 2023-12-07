@@ -2,13 +2,11 @@
 toc: true
 comments: false
 layout: post
-title: Logic gates
+title: Logic gates old
 description: Example Blog!!!  This shows planning and notes from hacks.
 type: plans
 courses: { compsci: {week: 0} }
-permalink: /basics/logicgates
 ---
-{% include nav-warmup.html %}
 <p>
 <button class="btnoff" id="button A" onclick="toggleButtonClassA();Outputandgate();Outputnandgate();Outputorgate();Outputnorgate();Outputxorgate()">Input A</button>
 <button class="btnoff" id="button B" onclick="toggleButtonClassB();Outputandgate();Outputnandgate();Outputorgate();Outputnorgate();Outputxorgate()">Input B</button>
