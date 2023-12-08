@@ -181,10 +181,12 @@ permalink: /basics/logicgates
     
 </script>
 <html>
+    <!-- html code for new question-->
     <p> note: Choose all that applies </p>
     <p>
         <button onclick="randominputA()">new question</button>
     </p>
+    <!-- buttons -->
     <table>
         <thead>
         <tr>
@@ -216,6 +218,7 @@ permalink: /basics/logicgates
     </table>
 </html>
 <script>
+    // defines all the variable used throught the code
     let a = ""
     let b = ""
     let c = ""
@@ -225,6 +228,7 @@ permalink: /basics/logicgates
     let choice3 = ""
     let choice4 = ""
     let choice5 = ""
+    // logic for switching the border color of the options when clicked
     function Choiceborder1() {
         var button = document.getElementById('option1');
         if (button.classList.contains('btnchoice')) {
@@ -285,6 +289,7 @@ permalink: /basics/logicgates
             choice5 = 1
         }
     }
+    // logic for random input and output
     function randominputA(){
         a = Math.floor(Math.random() * 2);
         b = Math.floor(Math.random() * 2);
@@ -292,6 +297,7 @@ permalink: /basics/logicgates
         document.getElementById("output").innerHTML= "output: " + c;
         document.getElementById("input").innerHTML= "variable a: " + a + " variable b: " + b;
     }
+    // logic for quiz
     function checkanswer(){
         if (a == 0 && b == 0){
             if (c == 1) {
@@ -385,6 +391,7 @@ permalink: /basics/logicgates
             <td>
                 <p id="output2"></p>
             </td>
+            <!-- textbox html -->
             <td>
                 <form id="myForm">
                     <label for="textInput">Enter logic gate(s):</label>
@@ -396,16 +403,19 @@ permalink: /basics/logicgates
     </table>
 </html>
 <script>
+    // defines the variables so the values of the variables can be used through different functions
     let a2 = "";
     let b2 = ""
     let c2 = ""
     let answer2 = ""
     function randominpu(){
+    // logic for random numbers
         a2 = Math.floor(Math.random() * 2);
         b2 = Math.floor(Math.random() * 2);
         c2 = Math.floor(Math.random() * 2);
         document.getElementById("output2").innerHTML= "output: " + c2;
         document.getElementById("input2").innerHTML= "variable a: " + a2 + " variable b: " + b2;
+    // logic for quiz
         if (a2 == 0 && b2 == 0){
             if (c2 == 1) {
                 answer2 = "nor,nand";
@@ -439,6 +449,7 @@ permalink: /basics/logicgates
             }
         }
     }
+    // logic for checking the user answer by comparing to the variable answer2
     function checkInput(){
         // Get the value from the textbox
         var inputValue = document.getElementById('textInput').value.toLowerCase().split(" ").join(""); // Convert to lowercase for case-insensitive comparison
