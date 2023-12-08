@@ -181,10 +181,10 @@ permalink: /basics/logicgates
     
 </script>
 <html>
+    <p> note: Choose all that applies </p>
     <p>
         <button onclick="randominputA()">new question</button>
     </p>
-    <p> note: Choose all that applies </p>
     <table>
         <thead>
         <tr>
@@ -441,7 +441,7 @@ permalink: /basics/logicgates
     }
     function checkInput(){
         // Get the value from the textbox
-        var inputValue = document.getElementById('textInput').value.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+        var inputValue = document.getElementById('textInput').value.toLowerCase().split(" ").join(""); // Convert to lowercase for case-insensitive comparison
         var sortedInput = inputValue.split(',').sort().join(',');
         var sortedAnswer = answer2.split(',').sort().join(',');
         // Check if the input matches the answer (order-insensitive)
