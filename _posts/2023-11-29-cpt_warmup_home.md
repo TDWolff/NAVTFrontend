@@ -28,9 +28,9 @@ permalink: /basics/home
 - Then we are planning to add a randomly generated quiz about logic gates which would randomly decide the inputs and outputs. Then the user would have to match it with the corresponding logic gate(s). Logic from the previous part (interactive truth table) will be used to check if the answer is correct.
 - Then we would like to add an overall theme which would look good for the UI.
 - Major commits:
-    - https://github.com/TDWolff/NAVTFrontend/commit/a94fcf1a549f8be73ec96115fda7b9e74434f0d9
-    - https://github.com/TDWolff/NAVTFrontend/commit/462c189f219e6b16cce8681c86f16817fc32f617 
-    - https://github.com/TDWolff/NAVTFrontend/commit/5339638f3495abfb30ee8dbd61e782306c8fbcb2 
+    - <a href="https://github.com/TDWolff/NAVTFrontend/commit/a94fcf1a549f8be73ec96115fda7b9e74434f0d9">Logic for 1st quiz</a>
+    - <a href="https://github.com/TDWolff/NAVTFrontend/commit/5339638f3495abfb30ee8dbd61e782306c8fbcb2"> 1st quiz logic bug fixes</a>
+    - <a href="https://github.com/TDWolff/NAVTFrontend/commit/313f1b9bdf280e100c0d52766ebc258e4bf1a97c">New quiz</a> 
 
 
 ### ASCII :
