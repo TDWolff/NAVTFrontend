@@ -38,4 +38,6 @@ permalink: /basics/home
   
 ### Color Code Aspect:
 
+For my Color Code part of the project I have made an RBG color selector where you mix different shades of the RBG Colors which as you know are Red, Green, and Blue. For each color there is 8 buttons with each button being a different shade of either Red, Green, or Blue. The more right the button is the more darker shade the color is. The more left the button is, the more lighter the shade of the color is. Color code shows an aspect of binary because it uses three main binary numbers to represent the amount and Red, Green, and Blue in the pixel. Additionally, there's an updateColor() function that translates the binary values into decimal values and sets the background color of a designated display div (color-display) according to the selected RGB values. The display area visually represents the color combination formed by the user's binary selections. 
+
 
