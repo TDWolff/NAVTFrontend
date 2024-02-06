@@ -2,8 +2,8 @@
 toc: true
 comments: false
 layout: post
-title: Ideation B
-description: ideation for project (JWT)
+title: Deployment
+description: deployment team teach
 type: plans
 courses: { compsci: {week: 14} }
 ---
