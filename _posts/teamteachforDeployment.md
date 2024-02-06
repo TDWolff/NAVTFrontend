@@ -1,3 +1,13 @@
+---
+toc: true
+comments: false
+layout: post
+title: Ideation B
+description: ideation for project (JWT)
+type: plans
+courses: { compsci: {week: 14} }
+---
+
 # Flask Portfolio Starter
 
 Use this project to create a Flask Servr.
