@@ -5,7 +5,7 @@ layout: post
 title: Deployment
 description: deployment team teach
 type: plans
-courses: { compsci: {week: 12} }
+courses: { compsci: {week: 11} }
 ---
 
 # Flask Portfolio Starter
